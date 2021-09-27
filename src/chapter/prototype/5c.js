@@ -34,7 +34,8 @@ user6.add(1);
 delete user6.add;
 delete user6.__proto__.add;
 
-add.bind(user6);
+userAdd = add.bind(user6);
 add(3);
+userAdd(3);
 
 console.log('User creator create', 'end');
