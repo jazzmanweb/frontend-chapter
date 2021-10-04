@@ -15,7 +15,7 @@ function createUser(name, score) {
 const user4 = createUser('Maciek', 10);
 const user5 = createUser('Franek', 5);
 
-user4.add();
+user4.add(1);
 
 delete user4.add;
 

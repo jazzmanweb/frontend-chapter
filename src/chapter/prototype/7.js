@@ -1,22 +1,15 @@
 console.log('User creator create', 'start');
 
 function createUser(name, score) {
-    const user = Object.create(functionsLibrary);
+    const user = {};
     user.name = name;
     user.score = score;
-    user.add = function (num) {
-        console.log('createUser.user.add+' + num);
-        user.score += num;
-        console.log(user.score);
-    }
     return user;
 }
 
-const functionsLibrary = {
-    add: function (num) {
-        this.score += num;
-    }
-};
+createUser.prototype.add = function (num) {
+    this.score += num;
+}
 
 const user6 = createUser('Maciek', 10);
 const user7 = createUser('Franek', 5);

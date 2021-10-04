@@ -9,14 +9,11 @@ function createUser(name, score) {
 
 const functionsLibrary = {
     add: function (num) {
-        console.log('functionsLibrary.add+' + num);
-        const addAndLog = (val) => {
+        function addAndLog(val) {
             this.score += val;
-            console.log(this.score);
         }
-        addAndLog(num);
-        console.log(this.score);
-    },
+        addAndLog.call(this, num);
+    }
 };
 
 const user6 = createUser('Maciek', 10);
